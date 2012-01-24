@@ -2,7 +2,7 @@
 //File modified by volo amdify
 //Wrapped in an outer function to preserve global this
 
-(function (root) { define([], function () { (function () {
+(function (root) { define([], function () { var Spinner; (function () {
 
 //fgnass.github.com/spin.js#v1.2.2
 (function(window, document, undefined) {
@@ -128,7 +128,7 @@
   }
 
   /** The constructor */
-  var Spinner = function Spinner(o) {
+  Spinner = function Spinner(o) {
     if (!this.spin) return new Spinner(o);
     this.opts = merge(o || {}, Spinner.defaults, defaults);
   },
@@ -296,7 +296,6 @@
     }
   })();
 
-  window.Spinner = Spinner;
 
 })(window, document);
 
