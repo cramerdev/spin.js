@@ -1,3 +1,9 @@
+
+//File modified by volo amdify
+//Wrapped in an outer function to preserve global this
+
+(function (root) { define([], function () { (function () {
+
 //fgnass.github.com/spin.js#v1.2.2
 (function(window, document, undefined) {
 
@@ -293,3 +299,10 @@
   window.Spinner = Spinner;
 
 })(window, document);
+
+
+}.call(root));
+
+return Spinner;
+
+}); }(this));
